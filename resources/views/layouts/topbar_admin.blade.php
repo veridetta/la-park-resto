@@ -11,7 +11,7 @@
 
             ?>
             <li class="nav-item position-relative me-2">
-                <a class="nav-link" href="{{ route('manager.notification') }}">
+                <a class="nav-link" href="{{ route('notification') }}">
                     <i class="align-middle" data-feather="bell"></i>
                     <span class="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-danger">
                         {{ $notifications->count() }}</span>

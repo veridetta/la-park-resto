@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 30, 2024 at 03:14 PM
+-- Generation Time: Apr 02, 2024 at 04:02 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.1
 
@@ -88,7 +88,8 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `name`, `category`, `price`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Tempe Goreng', 'makanan', 3500, 'WZU2QbtvrYsvJnsrTwqVuMCQDnkdXkkKpvENZY8n.jpg', '2024-03-26 08:59:21', '2024-03-26 09:06:07');
+(1, 'Tempe Goreng', 'makanan', 3500, '0lu0867PnwaNUZAqfrB0Q8g5odUJedgv5e41Pi1F.jpg', '2024-03-26 08:59:21', '2024-04-02 08:52:21'),
+(2, 'Teh Gelas', 'minuman', 2500, 'Is7vvEHGD3DVlxYNaoGQCnJox2JyKZFOnzHi0e0a.png', '2024-04-02 09:00:51', '2024-04-02 09:00:51');
 
 -- --------------------------------------------------------
 
@@ -149,22 +150,24 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `title`, `content`, `type`, `user_id`, `is_read`, `created_at`, `updated_at`) VALUES
-(1, 'Informasi login', 'Anda login pada 26 March 2024 16:26:25', 'user', 1, 1, '2024-03-26 09:26:25', '2024-03-30 00:41:16'),
-(2, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 1, 1, '2024-03-26 09:28:39', '2024-03-30 00:41:16'),
-(3, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 1, 1, '2024-03-26 09:29:20', '2024-03-30 00:41:16'),
-(4, 'Informasi login', 'Anda login pada 26 March 2024 16:34:48', 'user', 3, 0, '2024-03-26 09:34:48', '2024-03-26 09:34:48'),
-(5, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 3, 0, '2024-03-26 11:32:29', '2024-03-26 11:32:29'),
-(6, 'Informasi login', 'Anda login pada 26 March 2024 18:32:46', 'user', 1, 1, '2024-03-26 11:32:46', '2024-03-30 00:41:16'),
-(7, 'Informasi login', 'Anda login pada 26 March 2024 18:38:10', 'user', 3, 0, '2024-03-26 11:38:10', '2024-03-26 11:38:10'),
-(8, 'Informasi login', 'Anda login pada 30 March 2024 04:39:04', 'user', 1, 1, '2024-03-29 21:39:04', '2024-03-30 00:41:16'),
-(9, 'Informasi login', 'Anda login pada 30 March 2024 05:26:56', 'user', 3, 0, '2024-03-29 22:26:56', '2024-03-29 22:26:56'),
-(10, 'Informasi login', 'Anda login pada 30 March 2024 05:44:33', 'user', 1, 1, '2024-03-29 22:44:33', '2024-03-30 00:41:16'),
-(11, 'Informasi login', 'Anda login pada 30 March 2024 06:09:53', 'user', 3, 0, '2024-03-29 23:09:53', '2024-03-29 23:09:53'),
-(12, 'Informasi login', 'Anda login pada 30 March 2024 07:08:45', 'user', 1, 1, '2024-03-30 00:08:45', '2024-03-30 00:41:16'),
-(13, 'Informasi login', 'Anda login pada 30 March 2024 11:53:23', 'user', 1, 0, '2024-03-30 04:53:23', '2024-03-30 04:53:23'),
-(14, 'Informasi login', 'Anda login pada 30 March 2024 14:08:55', 'user', 1, 0, '2024-03-30 07:08:55', '2024-03-30 07:08:55'),
-(15, 'Informasi login', 'Anda login pada 30 March 2024 14:14:04', 'user', 3, 0, '2024-03-30 07:14:04', '2024-03-30 07:14:04'),
-(16, 'Informasi login', 'Anda login pada 30 March 2024 14:16:54', 'user', 1, 0, '2024-03-30 07:16:54', '2024-03-30 07:16:54');
+(1, 'Informasi login', 'Anda login pada 26 March 2024 16:26:25', 'user', 1, 1, '2024-03-26 09:26:25', '2024-04-02 08:35:47'),
+(2, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 1, 1, '2024-03-26 09:28:39', '2024-04-02 08:35:47'),
+(3, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 1, 1, '2024-03-26 09:29:20', '2024-04-02 08:35:47'),
+(4, 'Informasi login', 'Anda login pada 26 March 2024 16:34:48', 'user', 3, 1, '2024-03-26 09:34:48', '2024-04-02 08:51:19'),
+(5, 'Update Profil', 'Data Profil berhasil diperbarui', 'user', 3, 1, '2024-03-26 11:32:29', '2024-04-02 08:51:19'),
+(6, 'Informasi login', 'Anda login pada 26 March 2024 18:32:46', 'user', 1, 1, '2024-03-26 11:32:46', '2024-04-02 08:35:47'),
+(7, 'Informasi login', 'Anda login pada 26 March 2024 18:38:10', 'user', 3, 1, '2024-03-26 11:38:10', '2024-04-02 08:51:19'),
+(8, 'Informasi login', 'Anda login pada 30 March 2024 04:39:04', 'user', 1, 1, '2024-03-29 21:39:04', '2024-04-02 08:35:47'),
+(9, 'Informasi login', 'Anda login pada 30 March 2024 05:26:56', 'user', 3, 1, '2024-03-29 22:26:56', '2024-04-02 08:51:19'),
+(10, 'Informasi login', 'Anda login pada 30 March 2024 05:44:33', 'user', 1, 1, '2024-03-29 22:44:33', '2024-04-02 08:35:47'),
+(11, 'Informasi login', 'Anda login pada 30 March 2024 06:09:53', 'user', 3, 1, '2024-03-29 23:09:53', '2024-04-02 08:51:19'),
+(12, 'Informasi login', 'Anda login pada 30 March 2024 07:08:45', 'user', 1, 1, '2024-03-30 00:08:45', '2024-04-02 08:35:47'),
+(13, 'Informasi login', 'Anda login pada 30 March 2024 11:53:23', 'user', 1, 1, '2024-03-30 04:53:23', '2024-04-02 08:35:47'),
+(14, 'Informasi login', 'Anda login pada 30 March 2024 14:08:55', 'user', 1, 1, '2024-03-30 07:08:55', '2024-04-02 08:35:47'),
+(15, 'Informasi login', 'Anda login pada 30 March 2024 14:14:04', 'user', 3, 1, '2024-03-30 07:14:04', '2024-04-02 08:51:19'),
+(16, 'Informasi login', 'Anda login pada 30 March 2024 14:16:54', 'user', 1, 1, '2024-03-30 07:16:54', '2024-04-02 08:35:47'),
+(17, 'Informasi login', 'Anda login pada 02 April 2024 15:35:44', 'user', 1, 1, '2024-04-02 08:35:44', '2024-04-02 08:35:47'),
+(18, 'Informasi login', 'Anda login pada 02 April 2024 15:51:15', 'user', 3, 1, '2024-04-02 08:51:15', '2024-04-02 08:51:19');
 
 -- --------------------------------------------------------
 
@@ -253,7 +256,8 @@ CREATE TABLE `raw_materials` (
 --
 
 INSERT INTO `raw_materials` (`id`, `name`, `qty`, `limit`, `unit`, `created_at`, `updated_at`, `price`) VALUES
-(5, 'Tempe', 810, 100, 'gram', '2024-03-26 08:21:18', '2024-03-30 07:15:46', 300);
+(5, 'Tempe', 810, 100, 'gram', '2024-03-26 08:21:18', '2024-03-30 07:15:46', 300),
+(6, 'Micin', 1000, 100, 'gram', '2024-04-02 08:57:27', '2024-04-02 08:57:27', 100);
 
 -- --------------------------------------------------------
 
@@ -282,7 +286,8 @@ INSERT INTO `raw_material_histories` (`id`, `date`, `raw_material_id`, `in`, `ou
 (1, '2024-03-26', 5, 1000, 0, 'Tambah stok awal', 1000, '2024-03-26 08:21:18', '2024-03-26 08:21:18', 300),
 (2, '2024-03-26', 5, 50, 0, 'Penambahan stok', 1050, '2024-03-26 08:34:50', '2024-03-26 08:34:50', 300),
 (3, '2024-03-30', 5, 0, 110, 'Pengurangan stock bahan baku untuk penjualan Saya', 940, '2024-03-30 00:07:04', '2024-03-30 00:07:04', 300),
-(4, '2024-03-30', 5, 0, 20, 'Pengurangan stock bahan baku untuk penjualan Wisnu', 920, '2024-03-30 07:15:46', '2024-03-30 07:15:46', 300);
+(4, '2024-03-30', 5, 0, 20, 'Pengurangan stock bahan baku untuk penjualan Wisnu', 920, '2024-03-30 07:15:46', '2024-03-30 07:15:46', 300),
+(5, '2024-04-02', 6, 1000, 0, 'Tambah stok awal', 1000, '2024-04-02 08:57:27', '2024-04-02 08:57:27', 100);
 
 -- --------------------------------------------------------
 
@@ -304,7 +309,9 @@ CREATE TABLE `requirement_raw_materials` (
 --
 
 INSERT INTO `requirement_raw_materials` (`id`, `menu_id`, `raw_material_id`, `qty`, `created_at`, `updated_at`) VALUES
-(1, 1, 5, 10, '2024-03-26 09:06:34', '2024-03-26 09:06:34');
+(1, 1, 5, 10, '2024-03-26 09:06:34', '2024-03-26 09:06:34'),
+(2, 1, 6, 2, '2024-04-02 08:57:48', '2024-04-02 08:57:48'),
+(3, 2, 6, 1, '2024-04-02 09:01:07', '2024-04-02 09:01:07');
 
 -- --------------------------------------------------------
 
@@ -503,7 +510,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -515,7 +522,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -533,19 +540,19 @@ ALTER TABLE `predictions`
 -- AUTO_INCREMENT for table `raw_materials`
 --
 ALTER TABLE `raw_materials`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `raw_material_histories`
 --
 ALTER TABLE `raw_material_histories`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `requirement_raw_materials`
 --
 ALTER TABLE `requirement_raw_materials`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sales`

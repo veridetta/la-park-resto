@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\manager\DashboardController;
 use App\Http\Controllers\kasir\DashboardController as KasirDashboardController;
 use App\Http\Controllers\owner\DashboardController as OwnerDashboardController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,7 @@ Route::get('/dashboard', function () {
         return redirect()->route('login');
     }
 })->middleware(['auth'])->name('dashboard');
+Route::get('/notification', [Controller::class, 'notification'])->middleware(['auth'])->name('notification');
 
 Route::get('/profile', [Controller::class, 'profile'])->middleware(['auth'])->name('profile');
 
@@ -69,7 +71,6 @@ Route::middleware('checkRole:manager')->group(function () {
     Route::get('/manager/dashboard', [DashboardController::class, 'index'])->name('manager.dashboard');
     //masukkan ke dalam group route prefix admin
     Route::prefix('manager')->name('manager.')->group(function () {
-        Route::get('/notification', [Controller::class, 'notification'])->name('notification');
         Route::resource('menu', \App\Http\Controllers\manager\MenuController::class);
         Route::prefix('menu')->name('menu.')->group(function () {
             Route::get('/{id}/viewRequirement', [\App\Http\Controllers\manager\MenuController::class, 'viewRequirement'])->name('viewRequirement');
@@ -161,5 +162,13 @@ Route::get('/buat', function () {
     return 'berhasil';
 
 })->name('buat');
+
+//route php artisan storage:link
+Route::get('/link', function () {
+    //delete folder public/storage
+    \Illuminate\Support\Facades\File::deleteDirectory(public_path('storage'));
+    Artisan::call('storage:link');
+    return 'berhasil';
+})->name('link');
 
 require __DIR__ . '/auth.php';

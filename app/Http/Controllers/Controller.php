@@ -38,6 +38,7 @@ class Controller extends BaseController
             'email' => 'required|email|unique:users,email,'.$id,
         ]);
 
+
         //cek email duplikat
         $cek_email = User::where('email', $request->email)->where('id', '!=', $id)->count();
         if($cek_email > 0){

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Kasir;
 
 use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use App\Models\RawMaterial;
 use App\Models\RequirementRawMaterial;
 use Illuminate\Http\Request;
@@ -19,8 +20,13 @@ class SalesController extends Controller
 
     public function create()
     {
-        $menu = \App\Models\Menu::all();
-        $menu_jquery = \App\Models\Menu::all();
+        $menu = Menu::whereHas('requirementRawMaterials', function($q){
+            $q->where('qty', '>', 0);
+        })->get();
+        //ambil menu yang sudah memiliki bahan baku
+        $menu_jquery = Menu::whereHas('requirementRawMaterials', function($q){
+            $q->where('qty', '>', 0);
+        })->get();
         $menu_jquery = $menu_jquery->map(function($item){
             return [
                 'id' => $item->id,

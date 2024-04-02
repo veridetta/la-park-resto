@@ -26,7 +26,7 @@
                                 <option value="">Pilih Kategori</option>
                                 <option value="makanan" {{ old('category', $data->category) == 'makanan' ? 'selected' : '' }}>
                                     Makanan</option>
-                                <option value="minuman" {{ old('category', $data->category) == 'minuman' ? 'selected' : '' }}>
+                                <option value="minuman" {{ old('category', $data->category) == 'minuman' ? 'selected' : '' }}>Minuman</option>
                             </select>
                             @error('category')
                                 <div class="invalid-feedback">
